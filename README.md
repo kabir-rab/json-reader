@@ -24,7 +24,7 @@ _Please make sure you have backup of the environment/server which you wish to te
 
 
 ## Setting up the node.js application
-Download and unzip this repo to the following location of your Qlik Sense server where you wish you run the API from. 
+Download and unzip this repo to the following location of your Qlik Sense server where you wish to run the API from. 
 
 _Location of the Qlik Sense installation folder may vary as this is depending on where Qlik Sense has been installed._ 
 ```
@@ -33,7 +33,7 @@ _Location of the Qlik Sense installation folder may vary as this is depending on
 
 
 ## Configuring Qlik Sense Service Dispatcher
-You will setup the Qlik Sense Service Dispatcher to make sure that this API is running as a service alongside with all the other Qlik Services. This will also make sure the service restarts during a server reboot or Qlik services reboot. To achieve this you will need to make changes to the "services.conf" file (you can use any editors such as notepad) at the following location - 
+You will setup the Qlik Sense Service Dispatcher to make sure that this API is running as a service alongside with all the other Qlik Services. This will also make sure the service restarts during a server reboot or Qlik services reboot. To achieve this, you will need to make changes to the "services.conf" file (you can use any editors such as **notepad**) at the following location - 
 _Please make sure you backup the original file before making any changes to this. You will require admin privileges to make changes to this file_
 ```
 %programfiles%\Qlik\Sense\ServiceDispatcher
@@ -68,11 +68,11 @@ DisplayName=App Migration
 ExePath=Node\node.exe
 Script=..\MigrationService\index.js
 
-......a lot more
+...... and lots more
 ```
 
 Add the following to the very bottom of this file and save it.
-_Please make sure you amend the script path below to reflect the folder name you have given during extracting the GitHub repository in the few steps previously._
+_Please make sure you amend the **script** path below to reflect the folder name you have given during extracting the GitHub repository few steps above._
 ```
 [jsonreader]
 Identity=Qlik.jsonreader
@@ -99,7 +99,7 @@ You can try accessing the API root from a browser with-in the server. You should
 {"info":"This is a simple REST API built on node.js to allow users to read json files from a location and serve them via API."}
 ```
 
-To read a json file using this API - make sure you place the API on the server or in a network drive where the Qlik Service account have access to. Then use the following endpoint as per the example below - 
+To read a json file using this API - make sure you place the json file on the server or in a network drive where the Qlik Service account have access to. Then use the following endpoint as per the example below - 
 
 ```
 http://localhost:3000/json?path=D:\jsonfile.json
@@ -112,16 +112,15 @@ curl --location --request GET 'http://localhost:3000/json?path=D:\jsonfile.json'
 
 ### GET parameter details
 The API call shown above can be broken by - 
-```
-  Host :              http://localhost
-  Port :              3000
-  Endpoint :          /json
-  Request Parameter : path=[path to your json file which is accessible by the account running qlik services]
-```
+
+ | Host | http://localhost |
+ | Port | 3000 |
+ | Endpoint | /json |
+ | Request Parameter | path=[path to your json file which is accessible by the account running qlik services] |
 
 
 ### Response
-If you have a valid json file at the path provided in the query parameter, then this should return request status of 200 with the json from the file. Example (provided this was the content of the file you are reading) -
+If you have a valid json file at the path provided in the query parameter, then this should return status of 200 with the json from the file. Example (provided this was the content of the file you are reading) -
 ```json
 {
     "id": "0001",
