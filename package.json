@@ -1,0 +1,34 @@
+{
+  "name": "json-reader",
+  "version": "1.0.0",
+  "description": "A simple REST API built on node.js to allow users to read json files from a location and serve them via API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kabir-rab/json-reader.git"
+  },
+  "keywords": [
+    "REST",
+    "API",
+    "json",
+    "Qlik",
+    "Sense",
+    "json",
+    "reader",
+    "nested",
+    "json"
+  ],
+  "author": "Kabir Rab",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kabir-rab/json-reader/issues"
+  },
+  "homepage": "https://github.com/kabir-rab/json-reader#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "0.0.1-security"
+  }
+}
