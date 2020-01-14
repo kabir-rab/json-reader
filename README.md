@@ -112,7 +112,9 @@ curl --location --request GET 'http://localhost:3000/json?path=D:\jsonfile.json'
 
 ### GET parameter details
 The API call shown above can be broken by - 
-
+ 
+ | Key | Description |
+ | --- | --- |
  | Host | http://localhost |
  | Port | 3000 |
  | Endpoint | /json |
