@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/kabir-rab/json-reader#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "fs": "0.0.1-security"
   }
 }
